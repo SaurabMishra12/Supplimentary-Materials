@@ -77,17 +77,7 @@ through the inserted payload. Filtering changes both how much adversarial conten
 reaches the model and which adversarial content does; only the first is visible to
 a candidate-survival metric.
 
-## What is not here
 
-This package deliberately stops at the specification boundary. It does **not**
-contain:
-
-- the attack-generation implementation, including the A5 detector-query
-  optimisation loop and its search over local edits;
-- experiment orchestration, dataset-construction machinery, or debugging utilities;
-- unreleased attack variants;
-- model generations from the behavioural harnesses. The behavioural layer is
-  released as compliance indicators and aggregates rather than raw completions.
 
 The algorithmic specification of every attack configuration is in
 `configs/detector.yaml`, `results/table1_attack_ladder.csv` and
