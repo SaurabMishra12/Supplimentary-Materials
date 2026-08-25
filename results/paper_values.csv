@@ -1,0 +1,605 @@
+table,cell,printed
+inline,documents over 6 collections,272117.0
+inline,queries over 6 collections,3727.0
+Table 2,"bm25 nDCG@10 macro-average, budget 0",0.38
+Table 2,"bm25 nDCG@10 macro-average, budget 50",0.429
+Table 2,"bm25 nDCG@10 macro-average, budget 100",0.435
+Table 2,"dense nDCG@10 macro-average, budget 0",0.398
+Table 2,"dense nDCG@10 macro-average, budget 50",0.431
+Table 2,"dense nDCG@10 macro-average, budget 100",0.438
+Table 2,"rrf nDCG@10 macro-average, budget 0",0.449
+Table 2,"rrf nDCG@10 macro-average, budget 50",0.445
+Table 2,"rrf nDCG@10 macro-average, budget 100",0.441
+Table 2,"alpha_fixed nDCG@10 macro-average, budget 0",0.43
+Table 2,"alpha_fixed nDCG@10 macro-average, budget 50",0.44
+Table 2,"alpha_fixed nDCG@10 macro-average, budget 100",0.44
+Table 2,"alpha_learned nDCG@10 macro-average, budget 0",0.449
+Table 2,"alpha_learned nDCG@10 macro-average, budget 50",0.444
+Table 2,"alpha_learned nDCG@10 macro-average, budget 100",0.441
+Table 2,"alpha_learned_override nDCG@10 macro-average, budget 0",0.439
+Table 2,"alpha_learned_override nDCG@10 macro-average, budget 50",0.441
+Table 2,"alpha_learned_override nDCG@10 macro-average, budget 100",0.439
+Table 2,"alpha_oracle nDCG@10 macro-average, budget 0",0.524
+Table 2,"alpha_oracle nDCG@10 macro-average, budget 50",0.45
+Table 2,"alpha_oracle nDCG@10 macro-average, budget 100",0.445
+Table 2,"oracle5_post nDCG@10 macro-average, budget 0",0.512
+Table 2,"oracle5_post nDCG@10 macro-average, budget 50",0.475
+Table 2,"oracle5_post nDCG@10 macro-average, budget 100",0.466
+Table 2,"bm25 query-weighted delta vs dense, budget 0",-0.0601
+Table 2,"bm25 bootstrap CI low, budget 0",-0.0684
+Table 2,"bm25 bootstrap CI high, budget 0",-0.0523
+Table 2,"bm25 query-weighted delta vs dense, budget 100",-0.008
+Table 2,"bm25 bootstrap CI low, budget 100",-0.0112
+Table 2,"bm25 bootstrap CI high, budget 100",-0.0048
+Table 2,"rrf query-weighted delta vs dense, budget 0",0.0065
+Table 2,"rrf bootstrap CI low, budget 0",0.0007
+Table 2,"rrf bootstrap CI high, budget 0",0.0123
+Table 2,"rrf query-weighted delta vs dense, budget 100",-0.004
+Table 2,"rrf bootstrap CI low, budget 100",-0.006
+Table 2,"rrf bootstrap CI high, budget 100",-0.0019
+Table 2,"alpha_fixed query-weighted delta vs dense, budget 0",0.0177
+Table 2,"alpha_fixed bootstrap CI low, budget 0",0.0148
+Table 2,"alpha_fixed bootstrap CI high, budget 0",0.0207
+Table 2,"alpha_fixed query-weighted delta vs dense, budget 100",-0.0011
+Table 2,"alpha_fixed bootstrap CI low, budget 100",-0.0024
+Table 2,"alpha_fixed bootstrap CI high, budget 100",0.0004
+Table 2,"alpha_learned query-weighted delta vs dense, budget 0",0.0014
+Table 2,"alpha_learned bootstrap CI low, budget 0",-0.005
+Table 2,"alpha_learned bootstrap CI high, budget 0",0.0078
+Table 2,"alpha_learned query-weighted delta vs dense, budget 100",-0.0049
+Table 2,"alpha_learned bootstrap CI low, budget 100",-0.007
+Table 2,"alpha_learned bootstrap CI high, budget 100",-0.0026
+Table 2,"alpha_learned_override query-weighted delta vs dense, budget 0",0.0061
+Table 2,"alpha_learned_override bootstrap CI low, budget 0",0.0008
+Table 2,"alpha_learned_override bootstrap CI high, budget 0",0.0115
+Table 2,"alpha_learned_override query-weighted delta vs dense, budget 100",-0.0039
+Table 2,"alpha_learned_override bootstrap CI low, budget 100",-0.006
+Table 2,"alpha_learned_override bootstrap CI high, budget 100",-0.0019
+Table 2,"alpha_oracle query-weighted delta vs dense, budget 0",0.0809
+Table 2,"alpha_oracle bootstrap CI low, budget 0",0.0761
+Table 2,"alpha_oracle bootstrap CI high, budget 0",0.0859
+Table 2,"alpha_oracle query-weighted delta vs dense, budget 100",-0.0008
+Table 2,"alpha_oracle bootstrap CI low, budget 100",-0.003
+Table 2,"alpha_oracle bootstrap CI high, budget 100",0.0014
+Table 2,"oracle5_post query-weighted delta vs dense, budget 0",0.0722
+Table 2,"oracle5_post bootstrap CI low, budget 0",0.0675
+Table 2,"oracle5_post bootstrap CI high, budget 0",0.0769
+Table 2,"oracle5_post query-weighted delta vs dense, budget 100",0.0129
+Table 2,"oracle5_post bootstrap CI low, budget 100",0.011
+Table 2,"oracle5_post bootstrap CI high, budget 100",0.015
+Table 10,arguana |D|,8674.0
+Table 10,arguana |Q|,1406.0
+Table 10,arguana bm25 budget 0,0.306
+Table 10,arguana bm25 budget 100 (CE top-100),0.321
+Table 10,arguana dense budget 0,0.37
+Table 10,arguana dense budget 100 (CE top-100),0.319
+Table 10,arguana rrf budget 0,0.368
+Table 10,arguana rrf budget 100 (CE top-100),0.316
+Table 10,arguana alpha_fixed budget 0,0.381
+Table 10,arguana alpha_fixed budget 100 (CE top-100),0.318
+Table 10,arguana alpha_learned budget 0,0.359
+Table 10,arguana alpha_learned budget 100 (CE top-100),0.316
+Table 10,arguana alpha_learned_override budget 0,0.374
+Table 10,arguana alpha_learned_override budget 100 (CE top-100),0.319
+Table 10,arguana alpha_oracle budget 0,0.44
+Table 10,arguana alpha_oracle budget 100 (CE top-100),0.319
+Table 10,fiqa |D|,57638.0
+Table 10,fiqa |Q|,648.0
+Table 10,fiqa bm25 budget 0,0.238
+Table 10,fiqa bm25 budget 100 (CE top-100),0.348
+Table 10,fiqa dense budget 0,0.368
+Table 10,fiqa dense budget 100 (CE top-100),0.378
+Table 10,fiqa rrf budget 0,0.374
+Table 10,fiqa rrf budget 100 (CE top-100),0.37
+Table 10,fiqa alpha_fixed budget 0,0.405
+Table 10,fiqa alpha_fixed budget 100 (CE top-100),0.376
+Table 10,fiqa alpha_learned budget 0,0.366
+Table 10,fiqa alpha_learned budget 100 (CE top-100),0.367
+Table 10,fiqa alpha_learned_override budget 0,0.367
+Table 10,fiqa alpha_learned_override budget 100 (CE top-100),0.367
+Table 10,fiqa alpha_oracle budget 0,0.48
+Table 10,fiqa alpha_oracle budget 100 (CE top-100),0.374
+Table 10,nfcorpus |D|,3633.0
+Table 10,nfcorpus |Q|,323.0
+Table 10,nfcorpus bm25 budget 0,0.318
+Table 10,nfcorpus bm25 budget 100 (CE top-100),0.35
+Table 10,nfcorpus dense budget 0,0.316
+Table 10,nfcorpus dense budget 100 (CE top-100),0.343
+Table 10,nfcorpus rrf budget 0,0.342
+Table 10,nfcorpus rrf budget 100 (CE top-100),0.356
+Table 10,nfcorpus alpha_fixed budget 0,0.337
+Table 10,nfcorpus alpha_fixed budget 100 (CE top-100),0.349
+Table 10,nfcorpus alpha_learned budget 0,0.358
+Table 10,nfcorpus alpha_learned budget 100 (CE top-100),0.353
+Table 10,nfcorpus alpha_learned_override budget 0,0.358
+Table 10,nfcorpus alpha_learned_override budget 100 (CE top-100),0.353
+Table 10,nfcorpus alpha_oracle budget 0,0.404
+Table 10,nfcorpus alpha_oracle budget 100 (CE top-100),0.357
+Table 10,scidocs |D|,25657.0
+Table 10,scidocs |Q|,1000.0
+Table 10,scidocs bm25 budget 0,0.151
+Table 10,scidocs bm25 budget 100 (CE top-100),0.164
+Table 10,scidocs dense budget 0,0.216
+Table 10,scidocs dense budget 100 (CE top-100),0.18
+Table 10,scidocs rrf budget 0,0.199
+Table 10,scidocs rrf budget 100 (CE top-100),0.169
+Table 10,scidocs alpha_fixed budget 0,0.218
+Table 10,scidocs alpha_fixed budget 100 (CE top-100),0.175
+Table 10,scidocs alpha_learned budget 0,0.189
+Table 10,scidocs alpha_learned budget 100 (CE top-100),0.169
+Table 10,scidocs alpha_learned_override budget 0,0.19
+Table 10,scidocs alpha_learned_override budget 100 (CE top-100),0.169
+Table 10,scidocs alpha_oracle budget 0,0.264
+Table 10,scidocs alpha_oracle budget 100 (CE top-100),0.173
+Table 10,scifact |D|,5183.0
+Table 10,scifact |Q|,300.0
+Table 10,scifact bm25 budget 0,0.676
+Table 10,scifact bm25 budget 100 (CE top-100),0.693
+Table 10,scifact dense budget 0,0.646
+Table 10,scifact dense budget 100 (CE top-100),0.693
+Table 10,scifact rrf budget 0,0.715
+Table 10,scifact rrf budget 100 (CE top-100),0.691
+Table 10,scifact alpha_fixed budget 0,0.697
+Table 10,scifact alpha_fixed budget 100 (CE top-100),0.693
+Table 10,scifact alpha_learned budget 0,0.727
+Table 10,scifact alpha_learned budget 100 (CE top-100),0.693
+Table 10,scifact alpha_learned_override budget 0,0.727
+Table 10,scifact alpha_learned_override budget 100 (CE top-100),0.693
+Table 10,scifact alpha_oracle budget 0,0.782
+Table 10,scifact alpha_oracle budget 100 (CE top-100),0.694
+Table 10,trec-covid |D|,171332.0
+Table 10,trec-covid |Q|,50.0
+Table 10,trec-covid bm25 budget 0,0.589
+Table 10,trec-covid bm25 budget 100 (CE top-100),0.734
+Table 10,trec-covid dense budget 0,0.469
+Table 10,trec-covid dense budget 100 (CE top-100),0.713
+Table 10,trec-covid rrf budget 0,0.698
+Table 10,trec-covid rrf budget 100 (CE top-100),0.742
+Table 10,trec-covid alpha_fixed budget 0,0.544
+Table 10,trec-covid alpha_fixed budget 100 (CE top-100),0.725
+Table 10,trec-covid alpha_learned budget 0,0.692
+Table 10,trec-covid alpha_learned budget 100 (CE top-100),0.745
+Table 10,trec-covid alpha_learned_override budget 0,0.616
+Table 10,trec-covid alpha_learned_override budget 100 (CE top-100),0.736
+Table 10,trec-covid alpha_oracle budget 0,0.774
+Table 10,trec-covid alpha_oracle budget 100 (CE top-100),0.756
+Figure 3,alpha grid points,21.0
+Figure 3,queries on the tuning split,948.0
+Figure 3,share of queries with per-query range below 0.01,0.363
+Figure 3,share with range exactly 0,0.363
+Section 4.2,share of queries where the grid moves nDCG@10 by more than 0.01,0.637
+Remark 1,epsilon * P(F_epsilon),0.0036
+Remark 1,share of the oracle advantage earned off the flat set,0.955
+Figure 3,fiqa argmax alpha,0.7
+Figure 3,fiqa queries,648.0
+Figure 3,scifact argmax alpha,0.4
+Figure 3,scifact queries,300.0
+Table 8,BM25 (alpha=0) nDCG@10,0.377
+Table 8,BM25 (alpha=0) delta vs dense,-0.0792
+Table 8,BM25 (alpha=0) CI low,-0.1007
+Table 8,BM25 (alpha=0) CI high,-0.0576
+Table 8,Dense (alpha=1) nDCG@10,0.4562
+Table 8,Dense (alpha=1) delta vs dense,0.0
+Table 8,Dense (alpha=1) CI low,0.0
+Table 8,Dense (alpha=1) CI high,0.0
+Table 8,RRF (k=60) nDCG@10,0.4822
+Table 8,RRF (k=60) delta vs dense,0.026
+Table 8,RRF (k=60) CI low,0.0105
+Table 8,RRF (k=60) CI high,0.0418
+Table 8,Fixed alpha*=0.65 nDCG@10,0.5089
+Table 8,Fixed alpha*=0.65 delta vs dense,0.0527
+Table 8,Fixed alpha*=0.65 CI low,0.0405
+Table 8,Fixed alpha*=0.65 CI high,0.0651
+Table 8,"Learned: RandomForest(50,d5) nDCG@10",0.4711
+Table 8,"Learned: RandomForest(50,d5) delta vs dense",0.0149
+Table 8,"Learned: RandomForest(50,d5) CI low",-0.0022
+Table 8,"Learned: RandomForest(50,d5) CI high",0.0324
+Table 8,"Learned: RandomForest(500,d16) nDCG@10",0.4731
+Table 8,"Learned: RandomForest(500,d16) delta vs dense",0.017
+Table 8,"Learned: RandomForest(500,d16) CI low",0.0001
+Table 8,"Learned: RandomForest(500,d16) CI high",0.0343
+Table 8,Learned: GradientBoosting(500) nDCG@10,0.4675
+Table 8,Learned: GradientBoosting(500) delta vs dense,0.0114
+Table 8,Learned: GradientBoosting(500) CI low,-0.0059
+Table 8,Learned: GradientBoosting(500) CI high,0.029
+Table 8,Oracle alpha (ceiling) nDCG@10,0.5753
+Table 8,Oracle alpha (ceiling) delta vs dense,0.1192
+Table 8,Oracle alpha (ceiling) CI low,0.1061
+Table 8,Oracle alpha (ceiling) CI high,0.1327
+Table 8,BM25 (alpha=0) recomputed from curves,0.377
+Table 8,Dense (alpha=1) recomputed from curves,0.4562
+Table 8,Fixed alpha*=0.65 recomputed from curves,0.5089
+Table 8,Oracle alpha recomputed from curves,0.5753
+Table 8,RRF (k=60) recomputed from curves,0.4822
+Table 9,"RandomForest(50,d5) CV R2",0.096
+Table 9,"RandomForest(50,d5) Spearman rho",0.319
+Table 9,"RandomForest(50,d5) MAE",0.268
+Table 9,"RandomForest(50,d5) MAE of constant predictor",0.3
+Table 9,"RandomForest(500,d16) CV R2",0.076
+Table 9,"RandomForest(500,d16) Spearman rho",0.315
+Table 9,"RandomForest(500,d16) MAE",0.267
+Table 9,"RandomForest(500,d16) MAE of constant predictor",0.3
+Table 9,GradientBoosting(500) CV R2,-0.078
+Table 9,GradientBoosting(500) Spearman rho,0.271
+Table 9,GradientBoosting(500) MAE,0.279
+Table 9,GradientBoosting(500) MAE of constant predictor,0.3
+Table 9,mutual information query_len,0.017
+Table 9,mutual information dense_std,0.039
+Table 9,mutual information bm25_std,0.054
+Table 9,mutual information dense_cv,0.009
+Table 9,mutual information bm25_cv,0.013
+Table 9,mutual information has_identifier,0.006
+Section 4.2,highest single-feature mutual information,0.054
+Table 3,candidate-survival ASR A0_static_templates x D0_none,0.0
+Table 3,candidate-survival ASR A0_static_templates x D1_3feat_tiny,0.0
+Table 3,candidate-survival ASR A0_static_templates x D1b_3feat_trained,0.0
+Table 3,candidate-survival ASR A0_static_templates x D2_embed_probe,0.0
+Table 3,candidate-survival ASR A0_static_templates x D3_distilbert,0.0
+Table 3,candidate-survival ASR A0_static_templates x D4_guard_zeroshot,0.0
+Table 3,candidate-survival ASR A0_static_templates x D5_perplexity,0.0
+Table 3,candidate-survival ASR A1_query_conditioned x D0_none,0.99
+Table 3,candidate-survival ASR A1_query_conditioned x D1_3feat_tiny,0.0
+Table 3,candidate-survival ASR A1_query_conditioned x D1b_3feat_trained,0.02
+Table 3,candidate-survival ASR A1_query_conditioned x D2_embed_probe,0.92
+Table 3,candidate-survival ASR A1_query_conditioned x D3_distilbert,0.03
+Table 3,candidate-survival ASR A1_query_conditioned x D4_guard_zeroshot,0.0
+Table 3,candidate-survival ASR A1_query_conditioned x D5_perplexity,0.0
+Table 3,candidate-survival ASR A2_imperative_free x D0_none,1.0
+Table 3,candidate-survival ASR A2_imperative_free x D1_3feat_tiny,0.99
+Table 3,candidate-survival ASR A2_imperative_free x D1b_3feat_trained,1.0
+Table 3,candidate-survival ASR A2_imperative_free x D2_embed_probe,0.74
+Table 3,candidate-survival ASR A2_imperative_free x D3_distilbert,0.02
+Table 3,candidate-survival ASR A2_imperative_free x D4_guard_zeroshot,0.0
+Table 3,candidate-survival ASR A2_imperative_free x D5_perplexity,0.22
+Table 3,candidate-survival ASR A3_semantic_camouflage x D0_none,1.0
+Table 3,candidate-survival ASR A3_semantic_camouflage x D1_3feat_tiny,1.0
+Table 3,candidate-survival ASR A3_semantic_camouflage x D1b_3feat_trained,1.0
+Table 3,candidate-survival ASR A3_semantic_camouflage x D2_embed_probe,0.98
+Table 3,candidate-survival ASR A3_semantic_camouflage x D3_distilbert,0.99
+Table 3,candidate-survival ASR A3_semantic_camouflage x D4_guard_zeroshot,0.99
+Table 3,candidate-survival ASR A3_semantic_camouflage x D5_perplexity,1.0
+Table 3,candidate-survival ASR A4_length_matched x D0_none,1.0
+Table 3,candidate-survival ASR A4_length_matched x D1_3feat_tiny,1.0
+Table 3,candidate-survival ASR A4_length_matched x D1b_3feat_trained,1.0
+Table 3,candidate-survival ASR A4_length_matched x D2_embed_probe,0.98
+Table 3,candidate-survival ASR A4_length_matched x D3_distilbert,0.68
+Table 3,candidate-survival ASR A4_length_matched x D4_guard_zeroshot,0.0
+Table 3,candidate-survival ASR A4_length_matched x D5_perplexity,0.66
+Table 3,candidate-survival ASR A5_score_guided x D0_none,1.0
+Table 3,candidate-survival ASR A5_score_guided x D1_3feat_tiny,1.0
+Table 3,candidate-survival ASR A5_score_guided x D1b_3feat_trained,1.0
+Table 3,candidate-survival ASR A5_score_guided x D2_embed_probe,0.98
+Table 3,candidate-survival ASR A5_score_guided x D3_distilbert,0.68
+Table 3,candidate-survival ASR A5_score_guided x D4_guard_zeroshot,0.05
+Table 3,candidate-survival ASR A5_score_guided x D5_perplexity,0.15
+Table 3,candidate-survival ASR A6_split_payload x D0_none,1.0
+Table 3,candidate-survival ASR A6_split_payload x D1_3feat_tiny,1.0
+Table 3,candidate-survival ASR A6_split_payload x D1b_3feat_trained,1.0
+Table 3,candidate-survival ASR A6_split_payload x D2_embed_probe,0.98
+Table 3,candidate-survival ASR A6_split_payload x D3_distilbert,0.93
+Table 3,candidate-survival ASR A6_split_payload x D4_guard_zeroshot,0.01
+Table 3,candidate-survival ASR A6_split_payload x D5_perplexity,0.9
+Table 3,"mean ASR over A1-A6, D0_none",1.0
+Table 3,"maximum ASR over A1-A6, D0_none",1.0
+Table 3,"lowest cell over A1-A6, D0_none",0.99
+Table 3,"mean ASR over A1-A6, D1_3feat_tiny",0.83
+Table 3,"maximum ASR over A1-A6, D1_3feat_tiny",1.0
+Table 3,"lowest cell over A1-A6, D1_3feat_tiny",0.0
+Table 3,"mean ASR over A1-A6, D1b_3feat_trained",0.84
+Table 3,"maximum ASR over A1-A6, D1b_3feat_trained",1.0
+Table 3,"lowest cell over A1-A6, D1b_3feat_trained",0.02
+Table 3,"mean ASR over A1-A6, D2_embed_probe",0.93
+Table 3,"maximum ASR over A1-A6, D2_embed_probe",0.98
+Table 3,"lowest cell over A1-A6, D2_embed_probe",0.74
+Table 3,"mean ASR over A1-A6, D3_distilbert",0.55
+Table 3,"maximum ASR over A1-A6, D3_distilbert",0.99
+Table 3,"lowest cell over A1-A6, D3_distilbert",0.02
+Table 3,"mean ASR over A1-A6, D4_guard_zeroshot",0.18
+Table 3,"maximum ASR over A1-A6, D4_guard_zeroshot",0.99
+Table 3,"lowest cell over A1-A6, D4_guard_zeroshot",0.0
+Table 3,"mean ASR over A1-A6, D5_perplexity",0.49
+Table 3,"maximum ASR over A1-A6, D5_perplexity",1.0
+Table 3,"lowest cell over A1-A6, D5_perplexity",0.0
+Table 12,D6 mean ASR over A1-A6 (uncalibrated control),1.0
+Table 12,D6 maximum ASR over A1-A6 (uncalibrated control),1.0
+Table 3,"realised FPR at the 1% target, D1_3feat_tiny",0.004
+Table 3,"realised FPR at the 1% target, D1b_3feat_trained",0.008
+Table 3,"realised FPR at the 1% target, D2_embed_probe",0.011
+Table 3,"realised FPR at the 1% target, D3_distilbert",0.015
+Table 3,"realised FPR at the 1% target, D4_guard_zeroshot",0.009
+Table 3,"realised FPR at the 1% target, D5_perplexity",0.017
+Table 3,"realised FPR at the 1% target, D6_ensemble",0.049
+Table 3,"clean nDCG@10 cost at the 1% target, D1_3feat_tiny",0.0016
+Table 3,"clean nDCG@10 cost at the 1% target, D1b_3feat_trained",0.0065
+Table 3,"clean nDCG@10 cost at the 1% target, D2_embed_probe",0.01
+Table 3,"clean nDCG@10 cost at the 1% target, D3_distilbert",0.0054
+Table 3,"clean nDCG@10 cost at the 1% target, D4_guard_zeroshot",-0.0002
+Table 3,"clean nDCG@10 cost at the 1% target, D5_perplexity",0.003
+Table 3,"clean nDCG@10 cost at the 1% target, D6_ensemble",0.0
+Table 3,"episodes per cell, A1-A4 and A6",300.0
+Table 3,"episodes per cell, A5",60.0
+Table 3,A5 x D0 pooled over the seven detector-specific document sets,420.0
+Table 12,D1_3feat_tiny @ target 0.001: realised FPR,0.0
+Table 12,D1_3feat_tiny @ target 0.001: clean nDCG@10 cost,0.0
+Table 12,D1_3feat_tiny @ target 0.001: maximum ASR over A1-A6,1.0
+Table 12,D1_3feat_tiny @ target 0.01: realised FPR,0.004
+Table 12,D1_3feat_tiny @ target 0.01: clean nDCG@10 cost,0.0016
+Table 12,D1_3feat_tiny @ target 0.01: maximum ASR over A1-A6,1.0
+Table 12,D1_3feat_tiny @ target 0.05: realised FPR,0.055
+Table 12,D1_3feat_tiny @ target 0.05: clean nDCG@10 cost,0.0267
+Table 12,D1_3feat_tiny @ target 0.05: maximum ASR over A1-A6,1.0
+Table 12,D1b_3feat_trained @ target 0.001: realised FPR,0.0
+Table 12,D1b_3feat_trained @ target 0.001: clean nDCG@10 cost,0.0
+Table 12,D1b_3feat_trained @ target 0.001: maximum ASR over A1-A6,1.0
+Table 12,D1b_3feat_trained @ target 0.01: realised FPR,0.008
+Table 12,D1b_3feat_trained @ target 0.01: clean nDCG@10 cost,0.0065
+Table 12,D1b_3feat_trained @ target 0.01: maximum ASR over A1-A6,1.0
+Table 12,D1b_3feat_trained @ target 0.05: realised FPR,0.053
+Table 12,D1b_3feat_trained @ target 0.05: clean nDCG@10 cost,0.0415
+Table 12,D1b_3feat_trained @ target 0.05: maximum ASR over A1-A6,1.0
+Table 12,D2_embed_probe @ target 0.001: realised FPR,0.004
+Table 12,D2_embed_probe @ target 0.001: clean nDCG@10 cost,0.0067
+Table 12,D2_embed_probe @ target 0.001: maximum ASR over A1-A6,1.0
+Table 12,D2_embed_probe @ target 0.01: realised FPR,0.011
+Table 12,D2_embed_probe @ target 0.01: clean nDCG@10 cost,0.01
+Table 12,D2_embed_probe @ target 0.01: maximum ASR over A1-A6,0.98
+Table 12,D2_embed_probe @ target 0.05: realised FPR,0.059
+Table 12,D2_embed_probe @ target 0.05: clean nDCG@10 cost,0.0366
+Table 12,D2_embed_probe @ target 0.05: maximum ASR over A1-A6,0.95
+Table 12,D3_distilbert @ target 0.001: realised FPR,0.003
+Table 12,D3_distilbert @ target 0.001: clean nDCG@10 cost,0.0
+Table 12,D3_distilbert @ target 0.001: maximum ASR over A1-A6,1.0
+Table 12,D3_distilbert @ target 0.01: realised FPR,0.015
+Table 12,D3_distilbert @ target 0.01: clean nDCG@10 cost,0.0054
+Table 12,D3_distilbert @ target 0.01: maximum ASR over A1-A6,0.99
+Table 12,D3_distilbert @ target 0.05: realised FPR,0.058
+Table 12,D3_distilbert @ target 0.05: clean nDCG@10 cost,0.0129
+Table 12,D3_distilbert @ target 0.05: maximum ASR over A1-A6,0.96
+Table 12,D4_guard_zeroshot @ target 0.001: realised FPR,0.001
+Table 12,D4_guard_zeroshot @ target 0.001: clean nDCG@10 cost,0.0
+Table 12,D4_guard_zeroshot @ target 0.001: maximum ASR over A1-A6,0.99
+Table 12,D4_guard_zeroshot @ target 0.01: realised FPR,0.009
+Table 12,D4_guard_zeroshot @ target 0.01: clean nDCG@10 cost,-0.0002
+Table 12,D4_guard_zeroshot @ target 0.01: maximum ASR over A1-A6,0.99
+Table 12,D4_guard_zeroshot @ target 0.05: realised FPR,0.046
+Table 12,D4_guard_zeroshot @ target 0.05: clean nDCG@10 cost,0.017
+Table 12,D4_guard_zeroshot @ target 0.05: maximum ASR over A1-A6,0.96
+Table 12,D5_perplexity @ target 0.001: realised FPR,0.006
+Table 12,D5_perplexity @ target 0.001: clean nDCG@10 cost,0.0005
+Table 12,D5_perplexity @ target 0.001: maximum ASR over A1-A6,1.0
+Table 12,D5_perplexity @ target 0.01: realised FPR,0.017
+Table 12,D5_perplexity @ target 0.01: clean nDCG@10 cost,0.003
+Table 12,D5_perplexity @ target 0.01: maximum ASR over A1-A6,1.0
+Table 12,D5_perplexity @ target 0.05: realised FPR,0.057
+Table 12,D5_perplexity @ target 0.05: clean nDCG@10 cost,0.0435
+Table 12,D5_perplexity @ target 0.05: maximum ASR over A1-A6,0.95
+Table 12,D6_ensemble @ target 0.001: realised FPR,0.049
+Table 12,D6_ensemble @ target 0.001: clean nDCG@10 cost,0.0
+Table 12,D6_ensemble @ target 0.001: maximum ASR over A1-A6,1.0
+Table 12,D6_ensemble @ target 0.01: realised FPR,0.049
+Table 12,D6_ensemble @ target 0.01: clean nDCG@10 cost,0.0
+Table 12,D6_ensemble @ target 0.01: maximum ASR over A1-A6,1.0
+Table 12,D6_ensemble @ target 0.05: realised FPR,0.056
+Table 12,D6_ensemble @ target 0.05: clean nDCG@10 cost,0.0033
+Table 12,D6_ensemble @ target 0.05: maximum ASR over A1-A6,0.99
+Table 11,ROC-AUC A0_static_templates x D1_3feat_tiny,0.999
+Table 11,ROC-AUC A0_static_templates x D1b_3feat_trained,0.991
+Table 11,ROC-AUC A0_static_templates x D2_embed_probe,1.0
+Table 11,ROC-AUC A0_static_templates x D3_distilbert,1.0
+Table 11,ROC-AUC A0_static_templates x D4_guard_zeroshot,0.998
+Table 11,ROC-AUC A0_static_templates x D5_perplexity,0.964
+Table 11,ROC-AUC A0_static_templates x D6_ensemble,0.971
+Table 11,ROC-AUC A1_query_conditioned x D1_3feat_tiny,1.0
+Table 11,ROC-AUC A1_query_conditioned x D1b_3feat_trained,0.999
+Table 11,ROC-AUC A1_query_conditioned x D2_embed_probe,0.696
+Table 11,ROC-AUC A1_query_conditioned x D3_distilbert,0.997
+Table 11,ROC-AUC A1_query_conditioned x D4_guard_zeroshot,1.0
+Table 11,ROC-AUC A1_query_conditioned x D5_perplexity,0.457
+Table 11,ROC-AUC A1_query_conditioned x D6_ensemble,0.975
+Table 11,ROC-AUC A2_imperative_free x D1_3feat_tiny,0.977
+Table 11,ROC-AUC A2_imperative_free x D1b_3feat_trained,0.921
+Table 11,ROC-AUC A2_imperative_free x D2_embed_probe,0.861
+Table 11,ROC-AUC A2_imperative_free x D3_distilbert,0.998
+Table 11,ROC-AUC A2_imperative_free x D4_guard_zeroshot,1.0
+Table 11,ROC-AUC A2_imperative_free x D5_perplexity,0.977
+Table 11,ROC-AUC A2_imperative_free x D6_ensemble,0.949
+Table 11,ROC-AUC A3_semantic_camouflage x D1_3feat_tiny,0.029
+Table 11,ROC-AUC A3_semantic_camouflage x D1b_3feat_trained,0.107
+Table 11,ROC-AUC A3_semantic_camouflage x D2_embed_probe,0.463
+Table 11,ROC-AUC A3_semantic_camouflage x D3_distilbert,0.457
+Table 11,ROC-AUC A3_semantic_camouflage x D4_guard_zeroshot,0.509
+Table 11,ROC-AUC A3_semantic_camouflage x D5_perplexity,0.524
+Table 11,ROC-AUC A3_semantic_camouflage x D6_ensemble,0.491
+Table 11,ROC-AUC A4_length_matched x D1_3feat_tiny,0.32
+Table 11,ROC-AUC A4_length_matched x D1b_3feat_trained,0.341
+Table 11,ROC-AUC A4_length_matched x D2_embed_probe,0.492
+Table 11,ROC-AUC A4_length_matched x D3_distilbert,0.915
+Table 11,ROC-AUC A4_length_matched x D4_guard_zeroshot,1.0
+Table 11,ROC-AUC A4_length_matched x D5_perplexity,0.977
+Table 11,ROC-AUC A4_length_matched x D6_ensemble,0.875
+Table 11,ROC-AUC A6_split_payload x D1_3feat_tiny,0.331
+Table 11,ROC-AUC A6_split_payload x D1b_3feat_trained,0.352
+Table 11,ROC-AUC A6_split_payload x D2_embed_probe,0.481
+Table 11,ROC-AUC A6_split_payload x D3_distilbert,0.518
+Table 11,ROC-AUC A6_split_payload x D4_guard_zeroshot,0.765
+Table 11,ROC-AUC A6_split_payload x D5_perplexity,0.879
+Table 11,ROC-AUC A6_split_payload x D6_ensemble,0.521
+Table 13,D1_3feat_tiny evasion rate,1.0
+Table 13,D1_3feat_tiny median detector calls,33.0
+Table 13,D1_3feat_tiny mean detector calls,37.8
+Table 13,D1_3feat_tiny target queries,60.0
+Table 13,D1b_3feat_trained evasion rate,1.0
+Table 13,D1b_3feat_trained median detector calls,17.0
+Table 13,D1b_3feat_trained mean detector calls,22.3
+Table 13,D1b_3feat_trained target queries,60.0
+Table 13,D2_embed_probe evasion rate,0.98
+Table 13,D2_embed_probe median detector calls,9.0
+Table 13,D2_embed_probe mean detector calls,10.2
+Table 13,D2_embed_probe target queries,60.0
+Table 13,D3_distilbert evasion rate,0.68
+Table 13,D3_distilbert median detector calls,33.0
+Table 13,D3_distilbert mean detector calls,33.8
+Table 13,D3_distilbert target queries,60.0
+Table 13,D4_guard_zeroshot evasion rate,0.05
+Table 13,D4_guard_zeroshot median detector calls,17.0
+Table 13,D4_guard_zeroshot mean detector calls,23.8
+Table 13,D4_guard_zeroshot target queries,60.0
+Table 13,D5_perplexity evasion rate,0.85
+Table 13,D5_perplexity median detector calls,9.0
+Table 13,D5_perplexity mean detector calls,13.7
+Table 13,D5_perplexity target queries,60.0
+Table 13,D6_ensemble evasion rate,1.0
+Table 13,D6_ensemble median detector calls,9.0
+Table 13,D6_ensemble mean detector calls,9.1
+Table 13,D6_ensemble target queries,60.0
+Table 4,"A1_query_conditioned compliance, 1.5B, position 0",0.0
+Table 4,"A1_query_conditioned compliance, 3B, position 0",0.0
+Table 4,A1_query_conditioned candidate survival P(E|D0),0.99
+Table 4,"A2_imperative_free compliance, 1.5B, position 0",0.0
+Table 4,"A2_imperative_free compliance, 3B, position 0",0.068
+Table 4,A2_imperative_free candidate survival P(E|D0),1.0
+Table 4,"A3_semantic_camouflage compliance, 1.5B, position 0",0.0
+Table 4,"A3_semantic_camouflage compliance, 3B, position 0",0.01
+Table 4,A3_semantic_camouflage candidate survival P(E|D0),1.0
+Table 4,"A4_length_matched compliance, 1.5B, position 0",0.0
+Table 4,"A4_length_matched compliance, 3B, position 0",0.013
+Table 4,A4_length_matched candidate survival P(E|D0),1.0
+Table 4,"A5_score_guided compliance, 1.5B, position 0",0.0
+Table 4,"A5_score_guided compliance, 3B, position 0",0.013
+Table 4,A5_score_guided candidate survival P(E|D0),1.0
+Table 4,"A6_split_payload compliance, 1.5B, position 0",0.0
+Table 4,"A6_split_payload compliance, 3B, position 0",0.0
+Table 4,A6_split_payload candidate survival P(E|D0),1.0
+Table 4,"mean compliance over A1-A6, 3B, position 0",0.017
+Table 4,episodes per behavioural cell,400.0
+Table 4,"tool selection, poisoned inventory, 1.5B",0.4
+Table 4,"tool selection, clean inventory, 1.5B",0.0
+Table 4,"tool selection episodes per cell, 1.5B",100.0
+Table 4,"tool selection, poisoned inventory, 3B",0.6
+Table 4,"tool selection, clean inventory, 3B",0.0
+Table 4,"tool selection episodes per cell, 3B",100.0
+Section 6,tool selection 1.5B CI low,0.303
+Section 6,tool selection 1.5B CI high,0.503
+Section 6,tool selection 3B CI low,0.497
+Section 6,tool selection 3B CI high,0.697
+Section 6,"clean-episode exact match, 1.5B",0.122
+Section 6,"clean-episode exact match, 3B",0.022
+Section 6,"clean-episode token-F1, 1.5B",0.411
+Section 6,"clean-episode token-F1, 3B",0.338
+Section 6,"compliance at rank 0, over models x prompts x A0-A6",0.022
+Section 6,"compliance at rank 2, over models x prompts x A0-A6",0.0004
+Section 6,"compliance at rank 4, over models x prompts x A0-A6",0.0003
+Section 6,"3B, warning prompt, rank 0",0.071
+Section 6,"3B, warning prompt, rank 2",0.0011
+Section 6,"3B, plain prompt, all positions",0.0049
+Section 6,"3B, warning prompt, all positions",0.0245
+Figure 6,"QA compliance, 3B, position 0, A1-A6",0.017
+Figure 6,"QA compliance, 3B, averaged over positions, A1-A6",0.006
+Figure 6,"tool selection, 3B",0.6
+Table 5,A1_query_conditioned P(E|D0),0.99
+Table 5,"A1_query_conditioned P(C|E,D0)",0.55
+Table 5,A1_query_conditioned P(E|D3),0.03
+Table 5,"A1_query_conditioned P(C|E,D3)",0.667
+Table 5,A1_query_conditioned Wilson interval low,0.35
+Table 5,A1_query_conditioned Wilson interval high,0.88
+Table 5,A1_query_conditioned P(C|D3),0.02
+Table 5,A2_imperative_free P(E|D0),1.0
+Table 5,"A2_imperative_free P(C|E,D0)",0.47
+Table 5,A2_imperative_free P(E|D3),0.023
+Table 5,"A2_imperative_free P(C|E,D3)",0.857
+Table 5,A2_imperative_free Wilson interval low,0.49
+Table 5,A2_imperative_free Wilson interval high,0.97
+Table 5,A2_imperative_free P(C|D3),0.02
+Table 5,A3_semantic_camouflage P(E|D0),1.0
+Table 5,"A3_semantic_camouflage P(C|E,D0)",0.103
+Table 5,A3_semantic_camouflage P(E|D3),0.99
+Table 5,"A3_semantic_camouflage P(C|E,D3)",0.105
+Table 5,A3_semantic_camouflage Wilson interval low,0.07
+Table 5,A3_semantic_camouflage Wilson interval high,0.14
+Table 5,A3_semantic_camouflage P(C|D3),0.1033
+Table 5,A4_length_matched P(E|D0),1.0
+Table 5,"A4_length_matched P(C|E,D0)",0.327
+Table 5,A4_length_matched P(E|D3),0.68
+Table 5,"A4_length_matched P(C|E,D3)",0.325
+Table 5,A4_length_matched Wilson interval low,0.26
+Table 5,A4_length_matched Wilson interval high,0.39
+Table 5,A4_length_matched P(C|D3),0.22
+Table 5,A5_score_guided P(E|D3),0.68
+Table 5,"A5_score_guided P(C|E,D3)",0.195
+Table 5,A5_score_guided Wilson interval low,0.1
+Table 5,A5_score_guided Wilson interval high,0.34
+Table 5,A5_score_guided P(C|D3),0.1333
+Table 5,A6_split_payload P(E|D0),1.0
+Table 5,"A6_split_payload P(C|E,D0)",0.0
+Table 5,A6_split_payload P(E|D3),0.93
+Table 5,"A6_split_payload P(C|E,D3)",0.0
+Table 5,A6_split_payload Wilson interval low,0.0
+Table 5,A6_split_payload Wilson interval high,0.01
+Table 5,A6_split_payload P(C|D3),0.0
+Abstract,A2 x D3 surviving documents,7.0
+Abstract,A2 x D3 compliant survivors,6.0
+Abstract,A2 undefended compliant episodes,141.0
+Abstract,"A2 exposure under D3, 7/300",0.0233
+Abstract,"A2 survivor compliance, 6/7",0.857
+Abstract,"A2 undefended compliance, 141/300",0.47
+Table 6,"identity P(C|D) = P(C|E,D) P(E|D), maximum absolute error",0.0
+Remark 3,maximal cell of the detector with the lowest worst case,295.0
+Remark 3,"its two-sided Clopper-Pearson interval, low",0.962
+Remark 3,"its two-sided Clopper-Pearson interval, high",0.995
+Remark 3,"simultaneous one-sided lower bound, K=6 (Proposition 3)",0.956
+Table 14,scifact budget 0 nDCG@10,0.76
+Table 14,scifact budget 0 p50 latency,40.0
+Table 14,scifact budget 0 p95 latency,44.0
+Table 14,scifact budget 0 p99 latency,46.0
+Table 14,scifact budget 0 rerank stage,0.0
+Table 14,scifact budget 0 filter stage,29.0
+Table 14,scifact budget 0 retrieve+fuse stage,11.0
+Table 14,scifact budget 10 nDCG@10,0.738
+Table 14,scifact budget 10 p50 latency,79.0
+Table 14,scifact budget 10 p95 latency,83.0
+Table 14,scifact budget 10 p99 latency,86.0
+Table 14,scifact budget 10 rerank stage,35.0
+Table 14,scifact budget 10 filter stage,32.0
+Table 14,scifact budget 10 retrieve+fuse stage,12.0
+Table 14,scifact budget 50 nDCG@10,0.722
+Table 14,scifact budget 50 p50 latency,246.0
+Table 14,scifact budget 50 p95 latency,261.0
+Table 14,scifact budget 50 p99 latency,264.0
+Table 14,scifact budget 50 rerank stage,198.0
+Table 14,scifact budget 50 filter stage,37.0
+Table 14,scifact budget 50 retrieve+fuse stage,13.0
+Table 14,scifact budget 100 nDCG@10,0.72
+Table 14,scifact budget 100 p50 latency,463.0
+Table 14,scifact budget 100 p95 latency,487.0
+Table 14,scifact budget 100 p99 latency,495.0
+Table 14,scifact budget 100 rerank stage,416.0
+Table 14,scifact budget 100 filter stage,36.0
+Table 14,scifact budget 100 retrieve+fuse stage,13.0
+Table 14,fiqa budget 0 nDCG@10,0.433
+Table 14,fiqa budget 0 p50 latency,39.0
+Table 14,fiqa budget 0 p95 latency,42.0
+Table 14,fiqa budget 0 p99 latency,44.0
+Table 14,fiqa budget 0 rerank stage,0.0
+Table 14,fiqa budget 0 filter stage,28.0
+Table 14,fiqa budget 0 retrieve+fuse stage,11.0
+Table 14,fiqa budget 10 nDCG@10,0.417
+Table 14,fiqa budget 10 p50 latency,76.0
+Table 14,fiqa budget 10 p95 latency,80.0
+Table 14,fiqa budget 10 p99 latency,83.0
+Table 14,fiqa budget 10 rerank stage,34.0
+Table 14,fiqa budget 10 filter stage,30.0
+Table 14,fiqa budget 10 retrieve+fuse stage,12.0
+Table 14,fiqa budget 50 nDCG@10,0.39
+Table 14,fiqa budget 50 p50 latency,242.0
+Table 14,fiqa budget 50 p95 latency,248.0
+Table 14,fiqa budget 50 p99 latency,253.0
+Table 14,fiqa budget 50 rerank stage,192.0
+Table 14,fiqa budget 50 filter stage,36.0
+Table 14,fiqa budget 50 retrieve+fuse stage,13.0
+Table 14,fiqa budget 100 nDCG@10,0.386
+Table 14,fiqa budget 100 p50 latency,447.0
+Table 14,fiqa budget 100 p95 latency,461.0
+Table 14,fiqa budget 100 p99 latency,465.0
+Table 14,fiqa budget 100 rerank stage,399.0
+Table 14,fiqa budget 100 filter stage,35.0
+Table 14,fiqa budget 100 retrieve+fuse stage,13.0

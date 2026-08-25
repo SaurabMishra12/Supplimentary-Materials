@@ -1,0 +1,9 @@
+defense,mean_asr_a1_a6,max_asr_a1_a6,lowest_cell_a1_a6
+D0_none,0.9989,1.0,0.9933
+D1_3feat_tiny,0.8322,1.0,0.0
+D1b_3feat_trained,0.8367,1.0,0.02
+D2_embed_probe,0.93,0.9833,0.74
+D3_distilbert,0.5544,0.9867,0.0233
+D4_guard_zeroshot,0.175,0.99,0.0
+D5_perplexity,0.4878,0.9967,0.0
+D6_ensemble,0.9989,1.0,0.9933
