@@ -1,6 +1,6 @@
-# Beyond Candidate Survival: Measuring Exposure and Downstream Behavioural Attack Success in Retrieval Filters
+# Supplementary Materials
 
-Supplementary material for *Beyond Candidate Survival: Measuring Exposure and Downstream Behavioural Attack Success in Retrieval Filters*.
+Supplementary Materials for *Beyond Candidate Survival: Measuring Exposure and Downstream Behavioural Attack Success in Retrieval Filters*.
 
 This package provides a **minimal reference implementation** of the evaluation protocol together with the **experimental records underlying the reported results**. It is sufficient to inspect the protocol, audit the released experimental artifacts, and regenerate the experiment-derived tables and figures to the extent supported by the released records. It does not include the complete internal experiment-generation pipeline.
 
