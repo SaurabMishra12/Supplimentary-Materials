@@ -1,8 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this replication package or evaluate against CogniSync, please cite our paper."
-title: "What Survives, What Matters: The False Decoupling of Retrieval and Behavior in Adversarial RAG"
+message: "Please cite our paper."
 authors:
   - name: "Anonymous"
-date-released: 2026-08-30
-license: MIT
-type: software
+
