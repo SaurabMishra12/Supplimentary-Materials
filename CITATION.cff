@@ -2,10 +2,9 @@ cff-version: 1.2.0
 message: "If you use this replication package or evaluate against CogniSync, please cite our paper."
 title: "What Survives, What Matters: The False Decoupling of Retrieval and Behavior in Adversarial RAG"
 authors:
-  - family-names: "Mishra"
-    given-names: "Saurab"
+  - name: "Anonymous"
 date-released: 2026-08-30
-url: "https://github.com/SaurabMishra12/Supplimentary-Materials"
-repository-code: "https://github.com/SaurabMishra12/Supplimentary-Materials"
+url: "https://anonymous.4open.science/r/cognisync-supplementary"
+repository-code: "https://anonymous.4open.science/r/cognisync-supplementary"
 license: MIT
 type: software
