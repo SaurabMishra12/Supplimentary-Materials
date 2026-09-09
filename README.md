@@ -91,7 +91,7 @@ Supplimentary-Materials/
 Clone the repository and install dependencies using Conda or virtualenv:
 
 ```bash
-git clone https://github.com/SaurabMishra12/Supplimentary-Materials.git
+git clone https://github.com/<owner>/Supplimentary-Materials.git
 cd Supplimentary-Materials
 
 # Using conda:
@@ -150,9 +150,9 @@ This project is licensed under the [MIT License](LICENSE).
 ```bibtex
 @article{mishra2026whatsurvives,
   title={What Survives, What Matters: The False Decoupling of Retrieval and Behavior in Adversarial RAG},
-  author={Mishra, Saurab},
+  author={Anonymous},
   journal={Transactions on Machine Learning Research},
   year={2026},
-  url={https://github.com/SaurabMishra12/Supplimentary-Materials}
+  url={https://github.com/<owner>/Supplimentary-Materials}
 }
 ```
