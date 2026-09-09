@@ -148,7 +148,6 @@ This project is licensed under the [MIT License](LICENSE).
 @article{anonymous2026whatsurvives,
   title={What Survives, What Matters: The False Decoupling of Retrieval and Behavior in Adversarial RAG},
   author={Anonymous},
-  journal={Transactions on Machine Learning Research},
   year={2026}
 }
 ```
