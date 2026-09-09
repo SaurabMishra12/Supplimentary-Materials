@@ -1,6 +1,6 @@
 # Supplementary Materials: What Survives, What Matters
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Reproducibility](https://img.shields.io/badge/reproducibility-verified-success.svg)]()
 
