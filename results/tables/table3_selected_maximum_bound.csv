@@ -1,0 +1,2 @@
+detector,attack,successes,n,cp_low,cp_high,simultaneous_lower_bound_K6
+D2_embed_probe,A3_semantic_camouflage,295,300,0.9615,0.9946,0.956

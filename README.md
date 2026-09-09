@@ -1,208 +1,158 @@
-# Supplementary Materials
+# Supplementary Materials: What Survives, What Matters
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Reproducibility](https://img.shields.io/badge/reproducibility-verified-success.svg)]()
 
+This repository contains the complete supplementary materials, datasets, raw model completions, attack corpora, and reproduction code for:
 
-This package provides a **minimal reference implementation** of the evaluation protocol together with the **experimental records underlying the reported results**. It is sufficient to inspect the protocol, audit the released experimental artifacts, and regenerate the experiment-derived tables and figures to the extent supported by the released records. It does not include the complete internal experiment-generation pipeline.
+> **What Survives, What Matters: The False Decoupling of Retrieval and Behavior in Adversarial RAG**  
+> *Under review at Transactions on Machine Learning Research (TMLR)*
 
-The package includes the **full realized A0-A6 attack corpus** and the **full A5-optimized corpus** used in the reported experiments. The internal machinery used to generate or optimize these documents is not included. The reference implementation therefore operates on the released corpora and records rather than regenerating them.
+All results, tables, and figures can be reproduced **offline in seconds on standard CPU hardware** without requiring API keys or external GPU access.
 
-Everything released here is derived from the same experimental run that produced the manuscript. One command verifies the reported numerical values against the released records:
+---
+
+## Directory Structure
+
+```
+Supplimentary-Materials/
+├── README.md                           # Main documentation & reproduction guide
+├── MANIFEST.md                         # Detailed file manifest with row counts & sizes
+├── LICENSE                             # MIT License
+├── CITATION.cff                        # Citation File Format metadata
+├── environment.yml                     # Conda environment specification
+├── requirements.txt                    # Pip dependencies
+│
+├── configs/                            # Configuration files
+│   ├── retrieval.yaml                  # Retrieval & fusion pipeline configuration
+│   ├── detectors.yaml                  # Detectors D0-D6 & calibration parameters
+│   ├── behavior.yaml                   # Generation & downstream replay setup
+│   ├── models.yaml                     # Model definitions (Qwen, Phi, GPT-5-mini)
+│   └── environment.yaml                # Reproduction environment specification
+│
+├── prompts/                            # System & evaluation prompts
+│   ├── system_plain.txt                # Plain undefended system prompt
+│   ├── system_hardened.txt             # Hardened prompt with untrusted data directive
+│   ├── system_warning.txt              # Warning system prompt
+│   ├── qa_prompt_template.txt          # Standard RAG QA template
+│   ├── tool_selection_prompt.txt       # Tool calling prompt
+│   ├── prompt_templates.json           # Machine-readable prompt repository
+│   ├── tool_selection_schema.json      # Tool inventory and schemas
+│   └── output_parsing.md               # Canary parsing documentation
+│
+├── data/                               # Evaluation datasets and manifests
+│   ├── query_manifest.csv              # 300 SciFact target queries
+│   ├── calibration_manifest.csv        # 1,500 clean documents for detector calibration
+│   ├── fpr_eval_manifest.csv           # 1,500 held-out clean documents for FPR evaluation
+│   ├── attack_corpus/                  # Full attack corpus
+│   │   ├── attack_documents.parquet    # A0, A1, A2, A3, A4, A6 documents (1,800 rows)
+│   │   ├── a5_documents.parquet        # Adaptive A5 documents (1,260 rows)
+│   │   └── A0-A6/                      # Individual CSV exports per attack level
+│   └── records/                        # Raw experimental records & completions
+│       ├── qwen_per_episode.parquet    # 35,200 Qwen2.5-1.5B/3B episode records
+│       ├── phi_per_episode.parquet     # 10,400 Phi-3.5-mini episode records
+│       ├── gpt5_raw_responses.jsonl    # 600 raw unedited GPT-5-mini completions & tokens
+│       ├── gpt5_episode_results.csv    # 14,400 evaluated GPT-5-mini episodes across detectors
+│       ├── gpt5_audit_log.json         # Safety filter audit log
+│       ├── detector_scores.csv         # Candidate survival matrix across detectors & FPRs
+│       ├── detector_scores.parquet     # Parquet version of detector scores
+│       ├── detector_decisions.parquet  # 133,380 per-query exposure & compliance indicators
+│       ├── retrieval_per_query.parquet # 78,267 per-query retrieval scores on BEIR
+│       ├── a5_optimisation_records.csv # Optimization trajectories for adaptive attacker
+│       ├── sensitivity_analysis.csv    # GPT-5-mini sensitivity analysis across treatments
+│       └── qwen_truncation_audit.csv   # Context length audit confirming 0% prompt truncation
+│
+├── src/                                # Reference modular Python packages
+│   ├── attack_generation/              # A0-A6 attack generator implementations
+│   ├── detector/                       # D0-D6 detectors and quantile calibration
+│   ├── scoring/                        # EM, token-F1, canary detection, tool selection
+│   ├── analysis/                       # Exposure-compliance decomposition & McNemar test
+│   ├── reproduction/                   # Automated table rebuilder
+│   └── plotting/                       # Publication plotting routines (6.75in textwidth)
+│
+├── results/                            # Manuscript tables and figures
+│   ├── tables/                         # CSV versions of Tables 1-14, 20, 21, 25
+│   └── figures/                        # High-resolution publication figures (PNG & PDF)
+│
+└── examples/                           # Standalone reproduction scripts
+    ├── reproduce_main.py               # Recomputes core reversal tables in seconds
+    ├── reproduce_sensitivity.py        # Audits GPT-5 responses & computes Table 25
+    ├── reproduce_figures.py            # Validates and renders Figures 2-7
+    └── reproduce_all.py                # Full automated test and verification suite
+```
+
+---
+
+## Quickstart
+
+### 1. Environment Setup
+
+Clone the repository and install dependencies using Conda or virtualenv:
 
 ```bash
+git clone https://github.com/SaurabMishra12/Supplimentary-Materials.git
+cd Supplimentary-Materials
+
+# Using conda:
+conda env create -f environment.yml
+conda activate cognisync
+
+# Or using pip:
 pip install -r requirements.txt
-python examples/reproduce_all.py
 ```
 
-```text
-604 reported values verified against the manuscript:
-604 PASS, 0 FAIL
+### 2. Fast Offline Reproduction
+
+#### Recomputing Core Tables (Tables 2, 3, 4, 14, 20, 21)
+Rebuilds the primary tables from raw evaluation records and verifies numerical equivalence:
+```bash
+python examples/reproduce_main.py
 ```
 
-## What is here
+#### Reproducing GPT-5-mini Sensitivity Analysis (Table 25)
+Audits the 18 Azure content-filter blocked / empty completions and recomputes compliance across:
+1. **Non-compliant** (baseline conservative assignment, $N=300$)
+2. **Missing** (complete cases only, $N=282$)
+3. **Compliant** (upper-bound assignment, $N=300$)
 
-| Layer                    | Directory              | What it answers                                                                                                  |
-| ------------------------ | ---------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Specification            | `configs/`, `prompts/` | What was run, with which models, constants, thresholds, and prompts                                              |
-| Reference implementation | `examples/`            | How the reported measurements and analyses are defined and computed                                              |
-| Records                  | `data/`                | The released per-query and per-episode outcomes and realized attack corpora underlying the reported measurements |
-| Results                  | `results/`, `figures/` | The experiment-derived tables and figures regenerated or verified from the released records                      |
-
-## Artifact boundary
-
-The package releases the **realized experimental artifacts** used in the reported evaluation, including the full A0-A6 attack corpus and the full A5-optimized corpus, together with the records required to analyze their measured outcomes.
-
-The package does **not** release the internal code used to construct, mutate, or optimize new attack documents. In particular, the A5 documents are released as realized experimental artifacts, together with their recorded optimization outcomes, rather than with the internal optimization machinery that generated them.
-
-This boundary is intentional: the released package supports inspection and reproduction of the reported evaluation while avoiding disclosure of the complete internal experiment-generation pipeline.
-
-## Layout
-
-```text
-configs/
-    retrieval.yaml
-    detector.yaml
-    behaviour.yaml
-
-prompts/
-    system prompts
-    QA and tool-selection harnesses
-    A0 templates
-    output-parsing rules
-
-examples/
-    reproduce_all.py
-        verify the reported values against the released records
-
-    retrieval_demo.py
-        query -> dense -> BM25 -> fusion -> rerank -> metric
-
-    filter_demo.py
-        calibration -> threshold -> survival -> realised FPR -> intervals
-
-    replay_demo.py
-        detector decision -> survivors -> P(C|E,D) -> P(C|D)
-
-    make_figures.py
-        redraw experiment-derived Figures 3-7 from results/
-
-    make_sample_cases.py
-        rebuild data/sample_cases.json
-
-data/
-    records/
-        per-query and per-episode records
-        see MANIFEST.md
-
-    attack_corpus/
-        nb3_attack_documents.parquet
-            1,800 realized adversarial documents
-            covering A0-A6 × 300 queries
-
-        nb3_a5_documents.parquet
-            1,260 A5-optimized documents
-            with recorded detection scores and detector-query counts
-
-    sample_cases.json
-        15 cases followed through the whole evaluation pipeline
-
-results/
-    table1-table14
-    figure3/4/6/7 datasets
-    verification_report.csv
-
-figures/
-    figure3.png - figure7.png
-    redrawn from the released result datasets
+```bash
+python examples/reproduce_sensitivity.py
 ```
 
-## The three measurements, and why they are separate
-
-The paper follows one evaluation path through three stages, and the package is organized the same way.
-
-**Retrieval quality under matched reranking budgets** (`retrieval_demo.py`).
-
-Systems are compared only at equal cross-encoder forward passes. The fusion-weight oracle is a hindsight bound **within the evaluated scalar convex family on a 21-point grid**, not a bound on arbitrary per-query fusion policies.
-
-**Candidate survival at a stated operating point** (`filter_demo.py`).
-
-An attack success rate is not interpretable without the false-positive rate at which the detector was actually operating, so every realized rate is reported beside its target. The mean and the maximum over the evaluated attack suite rank the detectors differently; both are reported. The maximum uses a simultaneous confidence statement rather than the per-cell interval, because the selected maximum is a different statistical quantity.
-
-**Detector-conditioned behavioural replay** (`replay_demo.py`).
-
-Candidate survival is `P(E | D)`, an exposure quantity. Compliance among survivors, `P(C | E, D)`, is measured by replaying the episodes that the detector allows through. End-to-end compromise is
-
-```text
-P(C | D) = P(C | E, D) · P(E | D)
+#### Validating Figures (Figures 2 through 7)
+Verifies all publication figure assets (including Figure 7 with the corrected legend label `unconditional QA compliance`):
+```bash
+python examples/reproduce_figures.py
 ```
 
-in this candidate-insertion design because the directive can reach the model only through the inserted payload. Filtering therefore changes both how much adversarial content reaches the model and which adversarial content survives; only the first effect is visible to a candidate-survival metric.
+---
 
-The algorithmic specification of every attack configuration is given in:
+## Key Experimental Findings
 
-```text
-configs/detector.yaml
-results/table1_attack_ladder.csv
-results/table7_protocol_constants.csv
+1. **Exposure–Behavior Reversal**:
+   - Attacks designed to minimize retrieval-detector visibility (e.g., $A_3$ semantic camouflage) achieve high candidate exposure ($P(E) = 0.55$) but suffer low downstream behavioral compliance ($P(C|E) = 0.04$ on GPT-5-mini).
+   - In contrast, length-matched payload attacks ($A_4$) achieve lower exposure ($P(E) = 0.23$) but dramatically higher behavioral compliance ($P(C|E) = 0.27$ on GPT-5-mini).
+   - End-to-end vulnerability is dominated by downstream compliance, completely reversing the ranking inferred from retrieval-layer metrics alone ($p < 10^{-13}$).
+
+2. **Cross-Model Replication**:
+   - The ranking reversal holds across **Qwen2.5-1.5B**, **Qwen2.5-3B**, **Phi-3.5-mini**, and **GPT-5-mini**.
+
+3. **Robustness to Missing Data**:
+   - Treating platform-filtered episodes as non-compliant, dropping them, or treating them as compliant all preserve the reversal with $p < 4 \times 10^{-14}$.
+
+---
+
+## License & Citation
+
+This project is licensed under the [MIT License](LICENSE).
+
+```bibtex
+@article{mishra2026whatsurvives,
+  title={What Survives, What Matters: The False Decoupling of Retrieval and Behavior in Adversarial RAG},
+  author={Mishra, Saurab},
+  journal={Transactions on Machine Learning Research},
+  year={2026},
+  url={https://github.com/SaurabMishra12/Supplimentary-Materials}
+}
 ```
-
-The resulting realized attack documents used for the reported measurements are provided in:
-
-```text
-data/attack_corpus/
-```
-
-A5 records include the final detection score, detector-query count, and final threshold outcome. These records allow the **reported optimization outcomes and detector-query budget to be independently inspected**. They do not expose the internal edit-generation or detector-query optimization implementation.
-
-## Reproduction notes
-
-`reproduce_all.py` recomputes each table from the released per-query and per-episode records wherever those records contain the underlying observations. The `source` column in:
-
-```text
-results/verification_report.csv
-```
-
-identifies whether each reported value is:
-
-* recomputed directly from released records;
-* derived from released records; or
-* carried as a released aggregate where the underlying raw inputs are not part of the package.
-
-This distinction is intentional and makes the provenance of every reported value explicit.
-
-Two families of quantities cannot be independently recomputed from the released package and are therefore provided as recorded aggregates:
-
-* **realized false-positive rates**, which require the underlying clean calibration and evaluation scores for each detector;
-* **behavioural compliance rates**, which require the original model generations.
-
-Every other reported value that is supported by the released records, including the retrieval tables, candidate-survival matrix, operating-point summaries, adaptive-attacker cost, exposure quantities, conditional-compliance quantities, and statistical intervals, is recomputed from `data/`.
-
-Random seeds are 42 throughout.
-
-The bootstrap is a paired bootstrap over per-query scores with 10,000 resamples. Interval endpoints reproduce to within `6e-4` across tested NumPy versions.
-
-## Verification output
-
-The verification script checks the reported numerical values against the manuscript and records the provenance of each check in:
-
-```text
-results/verification_report.csv
-```
-
-A successful run produces:
-
-```text
-604 reported values verified against the manuscript:
-604 PASS, 0 FAIL
-```
-
-A `PASS` indicates that the value in the manuscript is consistent with the corresponding released or recomputed value under the verification procedure. The verification report distinguishes direct recomputation from checks against released aggregates.
-
-## Scope
-
-All numerical findings are scoped to the evaluated retrieval stack, attack suite, models, and behavioural harnesses: one dense retriever paired with one cross-encoder, one English security corpus, two compact instruction-tuned models, a single-turn question-answering harness, and a single-step tool-selection harness.
-
-The released artifacts do not establish claims about other retrievers, rerankers, fusion families, languages, model scales, or multi-step agents with persistent state.
-
-## Dual use
-
-The released corpora carry a single inert directive that requests a fixed token. They were built against detectors implemented and evaluated by the authors, using a public research corpus. Nothing in the released package was directed at a live system or a third party.
-
-The package does **not** include code for automated generation, mutation, or detector-specific optimization of new attack documents.
-
-The defensive value of the release is to make the evaluated filters auditable against the same named attack configurations and stated operating points, while allowing the detector-conditioned replay analysis to be independently inspected. In particular, the released artifacts make it possible to examine what exposure reduction does and does not change in downstream behaviour without providing the machinery for automatically generating new optimized attack corpora.
-
-## Reproducibility principle
-
-The package is designed around a simple separation:
-
-```text
-released realized artifacts
-        +
-released evaluation specification
-        +
-reference evaluation code
-        ↓
-verification and reconstruction of reported measurements
-```
-
-The goal is to make the **reported scientific claims reproducible and auditable**.

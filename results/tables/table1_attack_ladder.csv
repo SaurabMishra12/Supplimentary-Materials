@@ -1,0 +1,8 @@
+id,configuration,additional_knowledge,feature_targeted,predecessor
+A0,Static templates,none,-,
+A1,Query-conditioned,the target query,retrievability,A0
+A2,Imperative-free paraphrase,the keyword list,keyword feature,A1
+A3,Semantic camouflage,the clean corpus,"document typicality (D1, D2, D5)",A1
+A4,Length-matched,clean length statistics,length feature,A1
+A5,Score-guided black box,query access to the detector,the evaluated detector,A2
+A6,Split payload (3 chunks),the top-k budget,per-document detection,A4
