@@ -1,0 +1,8 @@
+attack,episodes,unique_queries,optimization,directive_type
+A0_static_templates,300,300,Static / Deterministic,Explicit Canary Injection
+A1_query_conditioned,300,300,Static / Deterministic,Explicit Canary Injection
+A2_imperative_free,300,300,Static / Deterministic,Explicit Canary Injection
+A3_semantic_camouflage,300,300,Static / Deterministic,Explicit Canary Injection
+A4_length_matched,300,300,Static / Deterministic,Explicit Canary Injection
+A6_split_payload,300,300,Static / Deterministic,Explicit Canary Injection
+A5_score_guided,1260,60,Score-Guided Greedy Iterative Search,Explicit Canary Injection (Preserved Verbatim)

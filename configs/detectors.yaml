@@ -1,0 +1,76 @@
+# Section 5: candidate-insertion evaluation of post-retrieval filters.
+seed: 42
+
+protocol:
+  host_collection: scifact
+  n_target_queries: 300          # sampled without replacement
+  clean_candidates: top-50 returned by the retrieval pipeline for the target query
+  insertion: adversarial document(s) merged into that candidate list before ranking and filtering
+  success: an inserted document remains in the top 10 after filtering (all three chunks, for A6)
+  note: >
+    The endpoint is candidate survival conditional on insertion. The experiment does not build
+    or search a contaminated full-corpus index and does not estimate corpus-level poison entry.
+
+calibration:
+  clean_documents: 3000          # sampled without replacement from the retrieval corpus
+  threshold_split: 1500          # calibrates thresholds; also supplies clean negatives for D1b, D2, D3
+  evaluation_split: 1500         # disjoint; used only for the realised FPR and as the negative class for ROC-AUC
+  query_dependent_detectors_calibrated_against: one fixed neutral query
+  score_convention: higher is more suspicious
+  threshold_rule: empirical (1 - target_fpr) quantile of the 1500 calibration scores
+  keep_rule: keep if score < threshold      # scores >= threshold are rejected
+  target_fpr: [0.001, 0.01, 0.05]
+
+detectors:
+  D1_3feat_tiny:
+    type: logistic regression, balanced class weights, max_iter 2000
+    features:
+      - cosine between the L2-normalised document embedding and the mean normalised embedding of the clean training documents
+      - keyword indicator (see keyword_feature)
+      - document length in characters divided by the mean clean length plus one
+    training_data: 6 clean corpus documents and the 6 static A0 templates
+  D1b_3feat_trained:
+    type: same three features and estimator as D1
+    training_data: 4000 rows sampled from the pooled injection corpora plus 1000 clean calibration documents
+  D2_embed_probe:
+    type: logistic regression, balanced, max_iter 3000
+    features: L2-normalised 384-d all-MiniLM-L6-v2 embedding
+    training_data: 6000 pooled injection rows plus 1500 clean documents
+  D3_distilbert:
+    model: distilbert-base-uncased
+    training_data: 12000 pooled injection rows plus 2000 clean documents
+    split: 90/10 train/validation
+    epochs: 2
+    learning_rate: 3.0e-5
+    batch_size: 32
+    max_seq_length: 256
+    precision: fp16
+    checkpoint: final (no early stopping)
+    score: softmax probability of the injection class
+  D4_guard_zeroshot:
+    model: protectai/deberta-v3-base-prompt-injection-v2
+    zero_shot: true
+    precision: fp16
+    max_length: 256
+    score: softmax probability of the class its id2label map names as the injection class
+  D5_perplexity:
+    model: gpt2                  # 124M
+    max_length: 256
+    window: 32
+    stride: 1
+    score: maximum window mean negative log-likelihood
+  D6_ensemble:
+    definition: max(s_D3(d), h(d, q))
+    h: 1 when the keyword feature fires AND the normalised document-query cosine is below 0.3, else 0
+    note: >
+      h saturates at 1, so the realised FPR cannot fall below the clean-document rate at which h
+      fires, which is 0.049. D6 is therefore reported as an uncalibrated control, not at a target.
+
+keyword_feature:
+  match: case-insensitive word boundary
+  terms: [ignore, reveal, execute, forget, bypass, output]
+
+pooled_injection_corpora:
+  - deepset/prompt-injections
+  - xTRam1/safe-guard-prompt-injection
+  - jackhhao/jailbreak-classification    # train splits, string labels mapped to binary

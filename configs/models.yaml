@@ -1,0 +1,54 @@
+# Model definitions, tokenization parameters, and generation configurations.
+models:
+  qwen_3b:
+    name: Qwen/Qwen2.5-3B-Instruct
+    hf_hub_id: Qwen/Qwen2.5-3B-Instruct
+    parameters: 3.09B
+    context_length: 32768
+    eval_context_limit: 2048
+    torch_dtype: float16
+    device_map: auto
+    tokenizer:
+      padding_side: left
+      pad_token: eos_token
+    generation:
+      do_sample: false
+      temperature: null
+      top_p: null
+      max_new_tokens: 64
+
+  qwen_1_5b:
+    name: Qwen/Qwen2.5-1.5B-Instruct
+    hf_hub_id: Qwen/Qwen2.5-1.5B-Instruct
+    parameters: 1.54B
+    context_length: 32768
+    eval_context_limit: 2048
+    torch_dtype: float16
+    generation:
+      do_sample: false
+      max_new_tokens: 64
+
+  phi_3_5:
+    name: microsoft/Phi-3.5-mini-instruct
+    hf_hub_id: microsoft/Phi-3.5-mini-instruct
+    parameters: 3.82B
+    context_length: 131072
+    eval_context_limit: 2048
+    torch_dtype: float16
+    generation:
+      do_sample: false
+      max_new_tokens: 64
+
+  gpt_5_mini:
+    name: gpt-5-mini
+    api_deployment: gpt-5-mini
+    provider: Azure OpenAI
+    generation:
+      temperature: 0.0
+      seed: 42
+    audit:
+      total_episodes: 600
+      valid_completions: 582
+      azure_content_filter_blocked: 14
+      empty_max_reasoning: 4
+      affected_attacks: [A4_length_matched]

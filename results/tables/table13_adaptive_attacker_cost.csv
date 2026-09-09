@@ -1,0 +1,8 @@
+defense,evasion_rate,median_detector_calls,mean_detector_calls,n_target_queries
+D1_3feat_tiny,1.0,33.0,37.8,60
+D1b_3feat_trained,1.0,17.0,22.3333,60
+D2_embed_probe,0.9833,9.0,10.2,60
+D3_distilbert,0.6833,33.0,33.8,60
+D4_guard_zeroshot,0.05,17.0,23.8,60
+D5_perplexity,0.85,9.0,13.6667,60
+D6_ensemble,1.0,9.0,9.1333,60
