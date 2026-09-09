@@ -6,8 +6,8 @@
 
 This repository contains the complete supplementary materials, datasets, raw model completions, attack corpora, and reproduction code for:
 
-> **What Survives, What Matters**  
-
+> **What Survives, What Matters: The False Decoupling of Retrieval and Behavior in Adversarial RAG**  
+> *Under review at Transactions on Machine Learning Research (TMLR)*
 
 All results, tables, and figures can be reproduced **offline in seconds on standard CPU hardware** without requiring API keys or external GPU access.
 
@@ -39,7 +39,7 @@ Supplimentary-Materials/
 │   ├── tool_selection_prompt.txt       # Tool calling prompt
 │   ├── prompt_templates.json           # Machine-readable prompt repository
 │   ├── tool_selection_schema.json      # Tool inventory and schemas
-│   └── output_parsing.md               # Canary parsing documentation
+│   └── output_parsing.md              # Canary parsing documentation
 │
 ├── data/                               # Evaluation datasets and manifests
 │   ├── query_manifest.csv              # 300 SciFact target queries
@@ -84,5 +84,71 @@ Supplimentary-Materials/
 
 ---
 
+## Quickstart
 
+### 1. Environment Setup
 
+Clone the repository and install dependencies using Conda or virtualenv:
+
+```bash
+# Using conda:
+conda env create -f environment.yml
+conda activate cognisync
+
+# Or using pip:
+pip install -r requirements.txt
+```
+
+### 2. Fast Offline Reproduction
+
+#### Recomputing Core Tables (Tables 2, 3, 4, 14, 20, 21)
+Rebuilds the primary tables from raw evaluation records and verifies numerical equivalence:
+```bash
+python examples/reproduce_main.py
+```
+
+#### Reproducing GPT-5-mini Sensitivity Analysis (Table 25)
+Audits the 18 Azure content-filter blocked / empty completions and recomputes compliance across:
+1. **Non-compliant** (baseline conservative assignment, $N=300$)
+2. **Missing** (complete cases only, $N=282$)
+3. **Compliant** (upper-bound assignment, $N=300$)
+
+```bash
+python examples/reproduce_sensitivity.py
+```
+
+#### Validating Figures (Figures 2 through 7)
+Verifies all publication figure assets (including Figure 7 with the corrected legend label `unconditional QA compliance`):
+```bash
+python examples/reproduce_figures.py
+```
+
+---
+
+## Key Experimental Findings
+
+1. **Exposure–Behavior Reversal**:
+   - Attacks designed to minimize retrieval-detector visibility (e.g., $A_3$ semantic camouflage) achieve high candidate exposure ($P(E) = 0.55$) but suffer low downstream behavioral compliance ($P(C|E) = 0.04$ on GPT-5-mini).
+   - In contrast, length-matched payload attacks ($A_4$) achieve lower exposure ($P(E) = 0.23$) but dramatically higher behavioral compliance ($P(C|E) = 0.27$ on GPT-5-mini).
+   - End-to-end vulnerability is dominated by downstream compliance, completely reversing the ranking inferred from retrieval-layer metrics alone ($p < 10^{-13}$).
+
+2. **Cross-Model Replication**:
+   - The ranking reversal holds across **Qwen2.5-1.5B**, **Qwen2.5-3B**, **Phi-3.5-mini**, and **GPT-5-mini**.
+
+3. **Robustness to Missing Data**:
+   - Treating platform-filtered episodes as non-compliant, dropping them, or treating them as compliant all preserve the reversal with $p < 4 \times 10^{-14}$.
+
+---
+
+## License & Citation
+
+This project is licensed under the [MIT License](LICENSE).
+
+```bibtex
+@article{anonymous2026whatsurvives,
+  title={What Survives, What Matters: The False Decoupling of Retrieval and Behavior in Adversarial RAG},
+  author={Anonymous},
+  journal={Transactions on Machine Learning Research},
+  year={2026}
+}
+```
